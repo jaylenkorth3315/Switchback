@@ -1,0 +1,32 @@
+name: Switchback
+options:
+  bundleIdPrefix: com.jaylenkorth
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    TARGETED_DEVICE_FAMILY: "1"
+targets:
+  Switchback:
+    type: application
+    platform: iOS
+    sources:
+      - Switchback
+    info:
+      path: Switchback/Info.plist
+      properties:
+        UILaunchScreen: {}
+        CFBundleDisplayName: Switchback
+        NSLocationWhenInUseUsageDescription: Switchback uses your location to show your position on the map and navigate routes.
+        NSLocationAlwaysAndWhenInUseUsageDescription: Switchback tracks your route in the background while recording an activity.
+        UIBackgroundModes:
+          - location
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jaylenkorth.switchback
+        GENERATE_INFOPLIST_FILE: NO
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 0.1.0
